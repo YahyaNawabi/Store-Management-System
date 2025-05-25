@@ -1,0 +1,25 @@
+<% layout('layout/boilerplate') %>
+<h1>Branches</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% branches.forEach(branch => { %>
+      <tr>
+        <td><%= branch.id %></td>
+        <td><%= branch.name %></td>
+        <td><%= branch.location %></td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

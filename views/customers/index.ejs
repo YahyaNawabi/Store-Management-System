@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') %>
+<h1>Customers</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Customer ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% customers.forEach(customer => { %>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.phone %></td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

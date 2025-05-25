@@ -1,0 +1,37 @@
+<% layout('layout/boilerplate') %>
+
+<h1>Products</h1>
+<a href="/products/add"><button>Add New Product</button></a>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price ($)</th>
+        <th>Stock</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= product.stock %></td>
+        <td><%= product.description || 'N/A' %></td>
+        <td><%= product.category || 'General' %></td>
+        <td>
+          <a href="/products/edit/<%= product.id %>"><button>Edit</button></a>
+          <form action="/products/delete/<%= product.id %>" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Are you sure?');">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

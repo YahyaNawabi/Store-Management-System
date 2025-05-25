@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') %>
+<h1>Staff</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% staff.forEach(member => { %>
+      <tr>
+        <td><%= member.id %></td>
+        <td><%= member.name %></td>
+        <td><%= member.position %></td>
+        <td><%= member.email %></td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

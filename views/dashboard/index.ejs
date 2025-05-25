@@ -1,0 +1,42 @@
+<% layout('/layout/boilerplate') %>
+<h1>Dashboard</h1>
+<div class="dashboard-cards">
+  <div class="card">
+    <h3>Total Products</h3>
+    <p><%= dashboardSummary.totalProducts %></p>
+  </div>
+  <div class="card">
+    <h3>Total Orders</h3>
+    <p><%= dashboardSummary.totalOrders %></p>
+  </div>
+  <div class="card">
+    <h3>Active Customers</h3>
+    <p><%= dashboardSummary.activeCustomers %></p>
+  </div>
+  <div class="card">
+    <h3>Revenue</h3>
+    <p>$<%= dashboardSummary.revenue.toLocaleString() %></p>
+  </div>
+</div>
+
+<div class="table-container">
+  <h2>Recent Activities</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Activity</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% recentActivities.forEach(activity => { %>
+        <tr>
+          <td><%= activity.id %></td>
+          <td><%= activity.activity %></td>
+          <td><%= activity.date %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

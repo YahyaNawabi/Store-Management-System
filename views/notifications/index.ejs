@@ -1,0 +1,14 @@
+<% layout('layout/boilerplate') %>
+
+<h1>Notifications</h1>
+<% if (notifications.length === 0) { %>
+  <p>No notifications.</p>
+<% } else { %>
+  <ul>
+    <% notifications.forEach(notification => { %>
+      <li>
+        <%= notification.message %> - <em><%= notification.date %></em>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

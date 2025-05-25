@@ -1,0 +1,25 @@
+<% layout('layout/boilerplate') %>
+<h1>Finances</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Account</th>
+      <th>Amount</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% finances.forEach(item => { %>
+      <tr>
+        <td><%= item.id %></td>
+        <td><%= item.account %></td>
+        <td>$<%= item.amount.toFixed(2) %></td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<% layout('layout/boilerplate') %>
+<h1>Orders</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Customer</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% orders.forEach(order => { %>
+      <tr>
+        <td><%= order.id %></td>
+        <td><%= order.customer %></td>
+        <td><%= order.date %></td>
+        <td><%= order.status %></td>
+        <td>$<%= order.total.toFixed(2) %></td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

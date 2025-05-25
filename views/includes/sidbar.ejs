@@ -1,0 +1,22 @@
+<!-- Sidebar -->
+ <section id="sidebar">
+    <a href="#" class="brand">
+      <i class='bx bxs-store bx-lg'></i>
+      <span class="text">SuperStore</span>
+    </a>
+    <ul class="side-menu top">
+      <li class="<%= currentPath === '/dashboard' ? 'active' : '' %>"><a href="/dashboard"><i class='bx bxs-dashboard'></i><span>Dashboard</span></a></li>
+      <li class="<%= currentPath === '/products' ? 'active' : '' %>"><a href="/products"><i class='bx bxs-box'></i><span>Products</span></a></li>
+      <li class="<%= currentPath === '/orders' ? 'active' : '' %>"><a href="/orders"><i class='bx bxs-cart'></i><span>Orders</span></a></li>
+      <li class="<%= currentPath === '/customers' ? 'active' : '' %>"><a href="/customers"><i class='bx bxs-user-account'></i><span>Customers</span></a></li>
+      <li class="<%= currentPath === '/logistics' ? 'active' : '' %>"><a href="/logistics"><i class='bx bxs-truck'></i><span>Logistics</span></a></li>
+      <li class="<%= currentPath === '/analytics' ? 'active' : '' %>"><a href="/analytics"><i class='bx bxs-bar-chart-alt-2'></i><span>Analytics</span></a></li>
+      <li class="<%= currentPath === '/finances' ? 'active' : '' %>"><a href="/finances"><i class='bx bxs-bank'></i><span>Finances</span></a></li>
+      <li class="<%= currentPath === '/branches' ? 'active' : '' %>"><a href="/branches"><i class='bx bxs-building'></i><span>Branches</span></a></li>
+      <li class="<%= currentPath === '/staff' ? 'active' : '' %>"><a href="/staff"><i class='bx bxs-group'></i><span>Staff</span></a></li>
+    </ul>
+    <ul class="side-menu bottom">
+      <li class="<%= currentPath === '/settings' ? 'active' : '' %>"><a href="/settings"><i class='bx bxs-cog'></i><span>Settings</span></a></li>
+      <li><a href="/logout" class="logout"><i class='bx bx-log-out'></i><span>Logout</span></a></li>
+    </ul>
+  </section>

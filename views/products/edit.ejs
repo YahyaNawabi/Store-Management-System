@@ -1,0 +1,13 @@
+<% layout('layout/boilerplate') %>
+
+<h1>Edit Product</h1>
+<form action="/products/edit/<%= product.id %>" method="POST">
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" value="<%= product.name %>" required /><br />
+  <label for="price">Price ($):</label><br />
+  <input type="number" id="price" name="price" step="0.01" value="<%= product.price %>" required /><br />
+  <label for="stock">Stock:</label><br />
+  <input type="number" id="stock" name="stock" value="<%= product.stock %>" required /><br /><br />
+  <button type="submit">Update Product</button>
+</form>
+<a href="/products"><button style="margin-top: 20px;">Back to Products</button></a>
